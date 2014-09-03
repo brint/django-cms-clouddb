@@ -197,7 +197,7 @@ resources:
             host: { get_param: database_host }
         rax:
           firewall:
-            tcp: [80]
+            tcp: [22, 80]
         run_list: ["recipe[apt]",
                    "recipe[build-essential]",
                    "recipe[python]",
