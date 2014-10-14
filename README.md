@@ -1,8 +1,8 @@
 Description
 ===========
 
-Heat template to deploy a load balancer, multiple servers running Django, and a
-Cloud Database
+Heat template to deploy a load balancer, multiple servers running Django CMS
+on Django v1.6.x, and a Cloud Database
 
 
 Requirements
@@ -101,6 +101,9 @@ install'.
 
 The Django CMS can be found in '/srv/workspace/mysite'. All installed
 applications and settings can be found in 'mysite/settings.py'.
+
+Django CMS as of v3.0.5 only officially supports Django v1.6.x. Once Django v1.7
+is officially supported we will migrate this deployment to Django v1.7.
 
 The CMS is served by [Apache](http://httpd.apache.org/) leveraging
 [mod_wsgi](http://www.modwsgi.org/). The mod_wsgi configuration can be found

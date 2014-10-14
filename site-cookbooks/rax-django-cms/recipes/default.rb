@@ -47,6 +47,14 @@ bash "create virtual environment #{workspace}" do
     not_if { ::File.exists?(File.join(workspace, 'bin', 'pip')) }
 end
 
+python_pip 'django' do
+  virtualenv workspace
+  user dev_user
+  group dev_group
+  version node['rax-django-cms']['django_version']
+  action :install
+end
+
 node['rax-django-cms']['pip_packages'].each do |pkg|
   python_pip pkg do
     virtualenv workspace

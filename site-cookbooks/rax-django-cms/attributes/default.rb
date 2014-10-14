@@ -7,6 +7,8 @@ default['rax-django-cms']['shell'] = '/bin/bash'
 default['rax-django-cms']['home'] = File.join('/home', node['rax-django-cms']['username'])
 
 # Django settings
+#  django-cms only support django 1.6.x at present. 
+default['rax-django-cms']['django_version'] = '1.6.7'
 default['rax-django-cms']['django_admin_user'] = 'admin'
 default['rax-django-cms']['django_admin_email'] = 'admin@example.com'
 default['rax-django-cms']['django_admin_pass'] = 'dj4ng0p4ss'
